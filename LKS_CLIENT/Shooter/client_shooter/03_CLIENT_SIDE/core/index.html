@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooter</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content" id="content">
+            <div class="header">
+                <div id="username">player name</div>
+                <div>score : <span id="score">0</span></div>
+                <div>Time : 00:<span id="time">00</span></div>
+            </div>
+
+            <img src="./assets/pointer.png" alt="" id="pointer">
+            <img src="./assets/gun1.png" id="gun" alt="">
+        </div>
+        <div class="leaderboard">
+            <h1>LeaderBoard</h1>
+            <select name="sort" id="sort">
+                <option value="score">score</option>
+                <option value="score">last match</option>
+            </select>
+            <div class="container-card" id="containerCard">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="countdown"
+        style="z-index: 101; 
+        background-color: rgba(0, 0, 0, 0.4); 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        color: white; 
+        font-size: 10rem; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0;">
+    </div>
+    <div id="pause" data-status="close"
+        style="z-index: 101;
+        background-color: rgba(0, 0, 0, 0.4); 
+        display: none; 
+        justify-content: center; 
+        align-items: center; 
+        color: white; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        flex-direction: 
+        column;">
+        <h2>pause</h2><br><button onclick="game.continue()">continue</button>
+    </div>
+    <div id="gameOver" data-status="close"
+        style="z-index: 101;
+        background-color: rgba(0, 0, 0, 0.4); 
+        display: none; 
+        justify-content: center; 
+        align-items: center; 
+        color: white; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        flex-direction: column;">
+        <div>username : <span id="gameOverUsername"></span></div>
+        <div>score : <span id="gameOverScore"></span></div>
+        <button onclick="game.save()">save score</button>
+        <button onclick="window.location.reload()">restart</button>
+    </div>
+
+    <script src="./classes/timer.js"></script>
+    <script src="./classes/target.js"></script>
+    <script src="./classes/gun.js"></script>
+    <script src="./classes/player.js"></script>
+    <script src="./classes/game.js"></script>
+
+    <script>
+        const username = sessionStorage.getItem('username')
+        if (!username || username == '' || username == 'undefined') {
+            window.location.href = '../index.html'
+        }
+
+        const content = document.getElementById('content')
+        const timer = new Timer()
+        const target = new Target()
+        const player = new Player()
+        const gun = new Gun()
+        const game = new Game()
+    </script>
+</body>
+
+</html>

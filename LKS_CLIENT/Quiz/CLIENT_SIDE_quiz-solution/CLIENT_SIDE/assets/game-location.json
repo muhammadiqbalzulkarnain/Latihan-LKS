@@ -1,0 +1,421 @@
+[
+    {
+        "scene": 1,
+        "quizzes": [
+            {
+                "id": "1",
+                "question": "Which is for styling?",
+                "choices": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "PHP"
+                ],
+                "correct": 1
+            }
+        ],
+        "main-content": {
+            "type": "video",
+            "src": "scene-1-video.mp4",
+            "property": {
+                "x": 649,
+                "y": 252,
+                "w": 700,
+                "h": 400,
+                "rotation": 0,
+                "z-index": 1
+            }
+        },
+        "components": [
+            {
+                "name": "game-title",
+                "image": "game-title.png",
+                "property": {
+                    "x": 205,
+                    "y": 77,
+                    "w": 352,
+                    "h": 68,
+                    "rotation": -7,
+                    "z-index": 7
+                }
+            },
+            {
+                "name": "tree",
+                "image": "tree.png",
+                "property": {
+                    "x": 215,
+                    "y": 300,
+                    "w": 301,
+                    "h": 367,
+                    "rotation": 0,
+                    "z-index": 2
+                }
+            },
+            {
+                "name": "street-sign-scene-1",
+                "image": "street-sign-scene-1.png",
+                "property": {
+                    "x": 92,
+                    "y": 394,
+                    "w": 125,
+                    "h": 127,
+                    "rotation": 0,
+                    "z-index": 5
+                }
+            },
+            {
+                "name": "grass-1",
+                "image": "grass.png",
+                "property": {
+                    "x": 303,
+                    "y": 424,
+                    "w": 125,
+                    "h": 86,
+                    "rotation": 0,
+                    "z-index": 3
+                }
+            },
+            {
+                "name": "grass-2",
+                "image": "grass.png",
+                "property": {
+                    "x": 963,
+                    "y": 436,
+                    "w": 125,
+                    "h": 86,
+                    "rotation": 0,
+                    "z-index": 4
+                }
+            },
+            {
+                "name": "main-area",
+                "image": "main-area.png",
+                "property": {
+                    "x": 649,
+                    "y": 252,
+                    "w": 733,
+                    "h": 424,
+                    "rotation": 0,
+                    "z-index": 1
+                }
+            },
+            {
+                "name": "fullscreen-button",
+                "image": "fullscreen-button.png",
+                "property": {
+                    "x": 1154,
+                    "y": 56,
+                    "w": 205,
+                    "h": 69,
+                    "rotation": 0,
+                    "z-index": 8
+                }
+            },
+            {
+                "name": "parallax-object",
+                "image": "parallax-background-1.jpeg",
+                "text": "WebTech!",
+                "property": {
+                    "x": 1159,
+                    "y": 217,
+                    "w": 177,
+                    "h": 224,
+                    "rotation": 0,
+                    "z-index": 9
+                }
+            },
+            {
+                "name": "street-sign-next",
+                "image": "street-sign-scene-1.png",
+                "property": {
+                    "x": 1197,
+                    "y": 416,
+                    "w": 138,
+                    "h": 127,
+                    "rotation": 0,
+                    "z-index": 6
+                }
+            }
+        ]
+    },
+    {
+        "scene": 2,
+        "quizzes": [
+            {
+                "id": "2",
+                "question": "Which is in <head>?",
+                "choices": [
+                    "meta",
+                    "body",
+                    "div",
+                    "textarea"
+                ],
+                "correct": 0
+            },
+            {
+                "id": "3",
+                "question": "Which is for important content?",
+                "choices": [
+                    "b",
+                    "bold",
+                    "strong",
+                    "i"
+                ],
+                "correct": 2
+            }
+        ],
+        "main-content": {
+            "type": "image",
+            "src": "scene-2-image.png",
+            "property": {
+                "x": 649,
+                "y": 252,
+                "w": 700,
+                "h": 400,
+                "rotation": 0,
+                "z-index": 3
+            }
+        },
+        "components": [
+            {
+                "name": "sun",
+                "image": "sun.png",
+                "property": {
+                    "x": 116,
+                    "y": 115,
+                    "w": 180,
+                    "h": 186,
+                    "rotation": 0,
+                    "z-index": 7
+                }
+            },
+            {
+                "name": "tree-1",
+                "image": "tree.png",
+                "property": {
+                    "x": 247,
+                    "y": 300,
+                    "w": 301,
+                    "h": 367,
+                    "rotation": 0,
+                    "z-index": 2
+                }
+            },
+            {
+                "name": "tree-2",
+                "image": "tree.png",
+                "property": {
+                    "x": 1037,
+                    "y": 240,
+                    "w": 301,
+                    "h": 367,
+                    "rotation": 0,
+                    "z-index": 1
+                }
+            },
+            {
+                "name": "street-sign-prev",
+                "image": "street-sign-prev.png",
+                "property": {
+                    "x": 178,
+                    "y": 383,
+                    "w": 138,
+                    "h": 127,
+                    "rotation": 0,
+                    "z-index": 4
+                }
+            },
+            {
+                "name": "grass-1",
+                "image": "grass.png",
+                "property": {
+                    "x": 115,
+                    "y": 421,
+                    "w": 125,
+                    "h": 86,
+                    "rotation": 0,
+                    "z-index": 5
+                }
+            },
+            {
+                "name": "grass-2",
+                "image": "grass.png",
+                "property": {
+                    "x": 219,
+                    "y": 414,
+                    "w": 125,
+                    "h": 86,
+                    "rotation": 0,
+                    "z-index": 6
+                }
+            },
+            {
+                "name": "main-area",
+                "image": "main-area.png",
+                "property": {
+                    "x": 649,
+                    "y": 252,
+                    "w": 733,
+                    "h": 424,
+                    "rotation": 0,
+                    "z-index": 3
+                }
+            },
+            {
+                "name": "fullscreen-button",
+                "image": "fullscreen-button.png",
+                "property": {
+                    "x": 1158,
+                    "y": 49,
+                    "w": 205,
+                    "h": 69,
+                    "rotation": 0,
+                    "z-index": 9
+                }
+            },
+            {
+                "name": "parallax-object",
+                "image": "parallax-background-2.jpg",
+                "text": "HTML",
+                "property": {
+                    "x": 1159,
+                    "y": 217,
+                    "w": 177,
+                    "h": 224,
+                    "rotation": 0,
+                    "z-index": 10
+                }
+            },
+            {
+                "name": "street-sign-next",
+                "image": "street-sign-next.png",
+                "property": {
+                    "x": 1197,
+                    "y": 416,
+                    "w": 138,
+                    "h": 127,
+                    "rotation": 0,
+                    "z-index": 6
+                }
+            }
+        ]
+    },
+    {
+        "scene": 3,
+        "quizzes": [
+            {
+                "id": "4",
+                "question": "Who is accessibility for?",
+                "choices": [
+                    "Disabled people",
+                    "Old people",
+                    "Blind people",
+                    "Every one"
+                ],
+                "correct": 3
+            }
+        ],
+        "main-content": {
+            "type": "video",
+            "src": "scene-3-video.mp4",
+            "property": {
+                "x": 649,
+                "y": 252,
+                "w": 700,
+                "h": 400,
+                "z-index": 2
+            }
+        },
+        "components": [
+            {
+                "name": "moon",
+                "image": "moon.png",
+                "property": {
+                    "x": 100,
+                    "y": 110,
+                    "w": 156,
+                    "h": 143,
+                    "z-index": 1
+                }
+            },
+            {
+                "name": "cloud",
+                "image": "cloud.png",
+                "property": {
+                    "x": 250,
+                    "y": 150,
+                    "w": 200,
+                    "h": 127,
+                    "z-index": 3
+                }
+            },
+            {
+                "name": "street-sign-prev",
+                "image": "street-sign-prev.png",
+                "property": {
+                    "x": 178,
+                    "y": 383,
+                    "w": 138,
+                    "h": 127,
+                    "z-index": 4
+                }
+            },
+            {
+                "name": "grass-1",
+                "image": "grass.png",
+                "property": {
+                    "x": 115,
+                    "y": 421,
+                    "w": 125,
+                    "h": 86,
+                    "z-index": 5
+                }
+            },
+            {
+                "name": "grass-2",
+                "image": "grass.png",
+                "property": {
+                    "x": 219,
+                    "y": 414,
+                    "w": 125,
+                    "h": 86,
+                    "z-index": 6
+                }
+            },
+            {
+                "name": "main-area",
+                "image": "main-area.png",
+                "property": {
+                    "x": 649,
+                    "y": 252,
+                    "w": 733,
+                    "h": 424,
+                    "z-index": 2
+                }
+            },
+            {
+                "name": "fullscreen-button",
+                "image": "fullscreen-button.png",
+                "property": {
+                    "x": 1158,
+                    "y": 49,
+                    "w": 205,
+                    "h": 69,
+                    "z-index": 7
+                }
+            },
+            {
+                "name": "parallax-object",
+                "image": "parallax-background-3.jpg",
+                "text": "WCAG",
+                "property": {
+                    "x": 1159,
+                    "y": 217,
+                    "w": 177,
+                    "h": 224,
+                    "z-index": 8
+                }
+            }
+        ]
+    }
+]

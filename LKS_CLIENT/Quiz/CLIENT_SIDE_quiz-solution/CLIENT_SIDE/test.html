@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .relative {
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(-30deg);
+        }
+
+        .text {
+            position: absolute;
+            translate: -50% -50%;
+            left: 50%;
+            top: 50%;
+            transform: translateZ(100px);
+        }
+
+        .round {
+            border-radius: 100%;
+            width: 70px;
+            height: 70px;
+            translate: -50% -50%;
+            left: 50%;
+            top: 50%;
+            background-color: white;
+            position: absolute;
+            transform: translateZ(50px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="relative">
+        <img src="./assets/scene-1/parallax-background-1.jpeg" alt="" width="100">
+        <div class="round">
+
+        </div>
+
+        <div class="text">
+            TEst
+        </div>
+    </div>
+</body>
+
+</html>

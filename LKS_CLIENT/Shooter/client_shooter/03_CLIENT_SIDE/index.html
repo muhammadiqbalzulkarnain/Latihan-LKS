@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .mx-auto {
+            margin: 0 auto;
+        }
+
+        .w-full {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .flex-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            width: 100%;
+            border: 0;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        #instruction {
+            padding: 50px 50px 50px 20px;
+            background-color: rgb(73, 73, 73);
+            color: white;
+            position: relative;
+        }
+
+        #instruction button {
+            position: absolute;
+            right: -100px;
+            top: -10px;
+            font-size: 2rem;
+            background-color: transparent;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="play(event)" class="mx-auto">
+        <div class="flex-row">
+            <img src="./core/assets/shooter.png" alt="" class="mx-auto">
+        </div>
+        <div>
+            <input type="text" name="username" id="username" placeholder=" Username" class="w-full">
+            <select name="level" id="level" class="w-full">
+                <option value="">Select Level</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <div class="flex-row">
+            <label for="gun1" class="flex-col">
+                <img src="./core/assets/gun1.png" alt="" style="width: 100px;">
+                <input type="radio" name="gun" id="gun1" checked value="gun1">
+            </label>
+            <label for="gun2" class="flex-col">
+                <img src="./core/assets/gun2.png" alt="" style="width: 100px;">
+                <input type="radio" name="gun" id="gun2" value="gun2">
+            </label>
+        </div>
+        <div class="flex-row">
+            <label for="target1" class="flex-col">
+                <img src="./core/assets/target1.png" alt="" style="width: 100px;">
+                <input type="radio" name="target" id="target1" checked value="target1">
+            </label>
+            <label for="target2" class="flex-col">
+                <img src="./core/assets/target2.png" alt="" style="width: 100px;">
+                <input type="radio" name="target" id="target2" value="target2">
+            </label>
+            <label for="target3" class="flex-col">
+                <img src="./core/assets/target3.png" alt="" style="width: 100px;">
+                <input type="radio" name="target" id="target3" value="target3">
+            </label>
+        </div>
+        <div class="flex-row">
+            <button style="background-color: green;" type="submit">Play</button>
+            <button style="background-color: chocolate;" type="button"
+                onclick="displayInstruction()">Instruction</button>
+        </div>
+    </form>
+
+    <div id="instruction" data-status="open">
+        <button type="button" onclick="displayInstruction()">x</button>
+        <h2>How to play game</h2>
+        <div>
+            <ol>
+                <li>Input Username</li>
+                <li>Point pointer at the target</li>
+                <li>Click to shoot</li>
+                <li>Get as many points as possible</li>
+                <li>Enjoy!</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const play = (e) => {
+            e.preventDefault()
+
+            const username = e.target.username.value
+            const level = e.target.level.value
+            const gun = e.target.gun.value
+            const target = e.target.target.value
+
+            if (username && level && username != '' && level != '') {
+                sessionStorage.setItem('username', username)
+                sessionStorage.setItem('level', level)
+                sessionStorage.setItem('target', target)
+                sessionStorage.setItem('gun', gun)
+                window.location.href = './core/index.html'
+                return
+            }
+
+            alert('please fill all input!')
+        }
+
+        const displayInstruction = () => {
+            const instructionEl = document.getElementById('instruction')
+            const status = instructionEl.dataset.status
+            if (status == 'open') {
+                instructionEl.style.display = 'none'
+                instructionEl.dataset.status = 'close'
+            } else {
+                instructionEl.style.display = 'block'
+                instructionEl.dataset.status = 'open'
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

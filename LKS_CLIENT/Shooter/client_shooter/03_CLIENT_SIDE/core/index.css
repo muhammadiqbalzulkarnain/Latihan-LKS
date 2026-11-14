@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 1000px;
+    display: flex;
+    height: 600px;
+}
+
+.content {
+    flex: 1 1 auto;
+    background-image: url(./assets/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.leaderboard {
+    width: 200px;
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
+.target {
+    width: 100px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    animation-name: appearTarget;
+    animation-duration: 0.5s;
+
+}
+
+@keyframes appearTarget {
+    0% {
+        transform: translate(-50%, -200%);
+    }
+
+    100% {
+        transform: translate(-50%, 0%);
+    }
+}
+
+#pointer {
+    width: 40px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+#gun {
+    width: 200px;
+    z-index: 99;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.effect {
+    position: absolute;
+    z-index: 98;
+    width: 40px;
+    transform: translate(-50%, -50%);
+}
+
+.container-card {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    padding: 3px 5px;
+    border-bottom: 1px red solid;
+}

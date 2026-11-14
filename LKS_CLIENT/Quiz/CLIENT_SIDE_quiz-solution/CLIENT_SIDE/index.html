@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="body">
+        <div id="main">
+            <div id="object-container"></div>
+
+            <div id="move-area">
+                <div id="quiz-barrier-container">
+                </div>
+            </div>
+
+            <div id="quiz-container" class="quiz-open hidden">
+                <div id="quiz">
+                    <div>
+                        <img src="./assets/scene-1/quiz-title.png" alt="" class="quiz-title">
+                        <img src="./assets/scene-1/close-button.png" alt="" class="close" id="close">
+                        <img src="./assets/scene-1/corner.png" alt="" class="corner-left">
+                        <img src="./assets/scene-1/corner.png" alt="" class="corner-right">
+                    </div>
+
+                    <div id="question">
+
+                    </div>
+
+                    <div id="answer">
+                    </div>
+                </div>
+            </div>
+
+            <div class=" quiz-open alert hidden" id="finish">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div>
+                        The game Is Finish
+                    </div>
+                    <button type="button" onclick="game.reset()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/object.js"></script>
+    <script src="./js/quiz.js"></script>
+    <script src="./js/avatar.js"></script>
+    <script src="./js/scene.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
