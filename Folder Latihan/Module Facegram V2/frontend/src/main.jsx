@@ -4,9 +4,9 @@ import './index.css'
 import './bootstrap.css'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './pages/Login.jsx';
+import Login from './pages/login.jsx';
 import Register from './pages/Register.jsx';
-import Homepage from './pages/Homepage.jsx';
+import Homepage from './pages/homepage.jsx';
 import MyProfile from './pages/my-profile.jsx';
 import CreateNewPost from './pages/create-new-post.jsx';
 import UserProfile from './pages/user-profile.jsx';
@@ -21,15 +21,15 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
       <Routes>
-        {/* <Route element={<NoAuth />}> */}
+        <Route element={<NoAuth />}>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
-        {/* </Route> */}
+        </Route>
 
         <Route element={<Auth />}>
           <Route element={<Navbar />} >
             <Route path="/homepage" element={<Homepage />} />
-            <Route path="/my-profile" element={<MyProfile />} />
+            <Route path="/my-profile/:username" element={<MyProfile />} />
             <Route path="/create-post" element={<CreateNewPost />} />
           </Route>
         </Route>
