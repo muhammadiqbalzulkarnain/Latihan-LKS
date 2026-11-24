@@ -20,7 +20,7 @@ class AuthController extends Controller
         $validated = $request->validate([
             'full_name' => 'required',
             'bio' => 'required|max:100',
-            'username' => 'required|min:3|unique:user, username|regex:/^[a-zA-Z0-9._]+$/',
+            'username' => 'required|min:3|unique:users,username|regex:/^[a-zA-Z0-9._]+$/',
             'password' => 'required|min:6',
             'is_private' => 'boolean'
         ]);
@@ -41,10 +41,10 @@ class AuthController extends Controller
     {
         $validated = $request->validate([
             'username' => 'required',
-            'passowrd' => 'required'
+            'password' => 'required'
         ]);
 
-        $user = User::where('username', $validated('username'));
+        $user = User::where('username', $validated['username'])->first();
 
         if ($user && password_verify($request->password, $user->password)) {
             $token = $user->createToken('auth_token')->plainTextToken;

@@ -13,11 +13,13 @@ class Post extends Model
 
     const UPDATED_AT = null;
 
-    public function user() {
-        return $this->belongTo(User::class);
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
-    public function attachments() {
+    public function attachments()
+    {
         return $this->hasMany(PostAttachment::class);
     }
 }

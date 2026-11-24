@@ -20,7 +20,7 @@ Route::prefix('v1')->group(function () {
             });
         });
 
-        Route::controller(\App\Http\Controllers\AuthController::class)->missing([\App\Http\Controllers\AuthController::class, 'notFound'])->group(function () {
+        Route::controller(\App\Http\Controllers\FollowController::class)->missing([\App\Http\Controllers\FollowController::class, 'notFound'])->group(function () {
             Route::prefix('users')->group(function () {
                 Route::post('{user:username}/follow', 'follow');
                 Route::delete('{user:username}/unfollow', 'unfollow');

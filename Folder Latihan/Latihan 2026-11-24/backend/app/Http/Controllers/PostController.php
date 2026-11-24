@@ -29,11 +29,12 @@ class PostController extends Controller
             'user_id' => $request->user()?->id
         ]);
 
+
         foreach ($validated['attachments'] as $attachment) {
             $path = $attachment->store('post', 'public');
 
             PostAttachment::create([
-                'post_id' => $post,
+                'post_id' => $post->id,
                 'storage_path' => $path
             ]);
         }
@@ -62,11 +63,11 @@ class PostController extends Controller
         $page = $validated['page'] ?? 0;
         $size = $validated['size'] ?? 10;
 
-        $post = Post::with('user', 'attachment')->paginate($size, ['*'], 'page', $page + 1);
+        $post = Post::with('user', 'attachments')->paginate($size, ['*'], 'page', $page + 1);
 
         return response([
-            'page' => $validated['page'],
-            'size' => $validated['size'],
+            'page' => $page,
+            'size' => $size,
             'post' => $post->items()
         ], 200);
     }

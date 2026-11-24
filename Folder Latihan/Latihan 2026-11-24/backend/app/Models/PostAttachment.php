@@ -6,14 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class PostAttachment extends Model
 {
-    public $timeStamps = false;
+    public $timestamps = false;
 
     protected $fillable = [
         'post_id',
         'storage_path'
     ];
 
-    public function post() {
+    public function post()
+    {
         return $this->belongsTo(Post::class);
     }
 }
